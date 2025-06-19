@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Repeater</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Smart Repeater</h1>
+
+    <form id="topic-form">
+      <input type="text" id="topic-name" placeholder="Topic Name" required>
+      <input type="text" id="topic-subject" placeholder="Subject" required>
+      <button type="submit">Add Topic</button>
+    </form>
+
+    <button id="export-btn">Export Data</button>
+    <input type="file" id="import-input" accept="application/json" />
+
+    <div class="filters">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('pending')">Pending</button>
+      <button onclick="setFilter('done')">Done</button>
+      <button onclick="setFilter('still')">Still Pending</button>
+    </div>
+
+    <label for="subject-filter">Filter by Subject:</label>
+    <select id="subject-filter">
+     <option value="all">All Subjects</option>
+     <!-- More options will be added dynamically -->
+    </select>
+
+
+    <select id="subject-filter">
+     <option value="all">All Subjects</option>
+    </select>
+    <input type="text" id="search-input" placeholder="Search by name or subject..." />
+
+    <ul id="topic-list"></ul>
+
+<div id="stats" class="stats-box">
+    <h2>📊 Review Stats</h2>
+    <p>Due Today: <span id="due-today">0</span></p>
+    <p>Still Pending: <span id="still-pending">0</span></p>
+    <p>Completed: <span id="completed-total">0</span></p>
+</div>
+      
+<div id="calendar"></div>
+    
+
+  <script src="script.js"></script>
+ <!-- Hover popup -->
+<div id="hover-popup" class="hover-popup" style="display:none;"></div> 
+</body>
+</html>

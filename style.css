@@ -1,0 +1,282 @@
+body {
+    font-family: sans-serif;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form input {
+    padding: 8px;
+    margin: 5px;
+    width: 45%;
+  }
+  
+  form button {
+    padding: 8px 12px;
+  }
+  
+  .filters button {
+    margin: 4px;
+    padding: 6px 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #calendar {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  .stats-box {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  }
+  
+  .stats-box h2 {
+    margin-top: 0;
+  }
+  
+  .stats-box p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .topic-notes {
+   font-style: italic;
+   color: #555;
+   margin: 4px 0 8px 0;
+   white-space: pre-wrap; /* preserve line breaks */
+  }
+
+  .btn-done {
+   background-color: #4caf50;
+   color: white;
+  }
+
+  .btn-done:hover {
+   background-color: #45a049;
+  }
+
+  .btn-edit {
+   background-color: #2196f3;
+   color: white;
+  }
+
+  .btn-edit:hover {
+   background-color: #1976d2;
+  }
+
+  .btn-delete {
+   background-color: #f44336;
+   color: white;
+  }
+
+  .btn-delete:hover {
+   background-color: #d32f2f;
+  }
+
+  /* Base font size for better readability on tablets */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 16px;
+}
+
+/* Topic list items bigger and more spaced */
+#topic-list li {
+  font-size: 20px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons larger and spaced out */
+button {
+  font-size: 18px;
+  padding: 12px 18px;
+  margin-left: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Input fields larger */
+input[type="text"],
+select {
+  font-size: 18px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+/* Responsive container for forms */
+#topic-form {
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+/* Calendar container full width on tablet */
+#calendar {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Adjust modal for tablet */
+.modal-box {
+  max-width: 600px;
+  padding: 24px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+/* Make clickable items bigger on hover and focus */
+#topic-list li button,
+.modal-box button {
+  min-width: 64px;
+  min-height: 44px;
+}
+
+/* Add spacing between buttons in topic list */
+#topic-list li button + button {
+  margin-left: 12px;
+}
+
+/* On smaller tablets or portrait mode */
+@media (max-width: 900px) {
+  body {
+    font-size: 16px;
+    padding: 12px;
+  }
+  #topic-list li {
+    font-size: 18px;
+    padding: 12px 14px;
+  }
+  button {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #hover-popup {
+    display: none !important;
+  }
+}
+
+
+  
+/* Ensure calendar doesn't overflow on tablets */
+#calendar {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Make stats and calendar stack on small screens */
+  @media (max-width: 768px) {
+    .stats-box {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  
+    .stats-box p {
+      font-size: 0.9rem;
+    }
+  
+    #calendar {
+      font-size: 0.9rem;
+    }
+  
+    body {
+      padding: 10px;
+    }
+  }
+  
+  /* For ultra-small screens */
+  @media (max-width: 480px) {
+    .stats-box h2 {
+      font-size: 1.1rem;
+    }
+  
+    #calendar {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Hover popup for calendar events */
+.hover-popup {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.hover-popup {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  pointer-events: none;
+}
